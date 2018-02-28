@@ -1,7 +1,7 @@
 TF_INC=$(python -c 'import tensorflow as tf; print(tf.sysconfig.get_include())')
 
 CUDA_PATH=/usr/local/cuda/
-CXXFLAGS=''
+CXXFLAGS='-I/home/dcortes/anaconda3/envs/py27/lib/python2.7/site-packages/tensorflow/include/external/nsync/public'
 
 if [[ "$OSTYPE" =~ ^darwin ]]; then
 	CXXFLAGS+='-undefined dynamic_lookup'
